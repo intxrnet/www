@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="w-full text-center py-4">
+    <header className="fixed w-full text-center py-4">
       <h1 className="text-xl">
         <Link href="https://www.intxr.net" className="hover:underline">
           www
