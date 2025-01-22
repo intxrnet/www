@@ -63,7 +63,7 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="fixed w-full text-center py-4">
+    <header className="fixed top-0 left-0 right-0 h-16 flex items-center justify-center bg-background z-10">
       <h1 className="text-xl">
         <Link href="https://www.intxr.net" className="hover:underline">
           www
@@ -83,7 +83,7 @@ function Header() {
 
 function Footer() {
   return (
-    <footer className="fixed bottom-2 left-0 right-0 h-4 px-4 flex justify-between items-center text-gray-500 bg-background mb-2">
+    <footer className="fixed bottom-2 left-0 right-0 h-8 flex justify-between items-center px-4 text-gray-500 bg-background z-10">
       <Link
         href="https://github.com/intxrnet"
         className="hover:underline"
@@ -111,9 +111,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={ibmPlex.variable}>
-      <body className="min-h-screen">
+      <body className="flex flex-col min-h-screen overflow-hidden">
         <Header />
-        <main className="pb-4">{children}</main>
+        <div className="h-16" aria-hidden="true"></div>
+        <main className="flex-1 flex flex-col">{children}</main>
+        <div className="h-8" aria-hidden="true"></div>
         <Footer />
       </body>
     </html>
