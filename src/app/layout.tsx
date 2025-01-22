@@ -63,16 +63,20 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 h-16 flex items-center justify-center bg-background z-10">
-      <h1 className="text-xl">
+    <header className="fixed top-0 left-0 right-0 h-16 flex items-center bg-background z-10 px-4">
+      <h1 className="text-xl flex-1 flex justify-end">
         <Link href="https://www.intxr.net" className="hover:underline">
           www
         </Link>
+      </h1>
+      <h1 className="text-xl">
         .
         <Link href="https://www.intxr.net" className="hover:underline">
           intxr
         </Link>
         .
+      </h1>
+      <h1 className="text-xl flex-1 flex justify-start">
         <Link href="https://net.intxr.net" className="hover:underline">
           net
         </Link>
