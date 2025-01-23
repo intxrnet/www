@@ -2,6 +2,7 @@ import Link from "next/link";
 
 interface CloudItem {
   text: string;
+  description?: string;
 }
 
 interface LeftCloudProps {
@@ -27,7 +28,11 @@ export default function LeftCloud({ title, items }: LeftCloudProps) {
       <ul className="space-y-2 text-center">
         {items.map((item, index) => (
           <li key={index}>
-            <Link href={formatHref(item.text)} className="hover:underline">
+            <Link
+              href={formatHref(item.text)}
+              className="hover:underline"
+              title={item.description}
+            >
               {item.text}
             </Link>
           </li>
