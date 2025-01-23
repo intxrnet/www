@@ -9,23 +9,23 @@ export default function Home() {
         <LeftCloud
           title="Tools"
           items={[
-            { text: "Calculator", href: "/tools/calculator" },
-            { text: "Converter", href: "/tools/converter" },
-            { text: "Notepad", href: "/tools/notepad" },
+            { text: "Calculator" },
+            { text: "Converter" },
+            { text: "Notepad" },
           ]}
         />
         <LeftCloud
           title="Resources"
           items={[
-            { text: "Documentation", href: "/resources/docs" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "Tutorials", href: "/resources/tutorials" },
-            { text: "FAQ", href: "/resources/faq" },
+            { text: "Documentation" },
+            { text: "Tutorials asdasd" },
+            { text: "Tutorials" },
+            { text: "Tutorials" },
+            { text: "Tutorials" },
+            { text: "Tutorials" },
+            { text: "Tutorials" },
+            { text: "Tutorials" },
+            { text: "FAQ" },
           ]}
         />
       </div>
@@ -34,19 +34,11 @@ export default function Home() {
       <div className="w-1/2 flex flex-col items-start p-4 space-y-4">
         <RightCloud
           title="Community"
-          items={[
-            { text: "Forum", href: "/community/forum" },
-            { text: "Chat", href: "/community/chat" },
-            { text: "Events", href: "/community/events" },
-          ]}
+          items={[{ text: "Forum" }, { text: "Chat" }, { text: "Events" }]}
         />
         <RightCloud
           title="About"
-          items={[
-            { text: "Team", href: "/about/team" },
-            { text: "Mission", href: "/about/mission" },
-            { text: "Contact", href: "/about/contact" },
-          ]}
+          items={[{ text: "Team" }, { text: "Mission" }, { text: "Contact" }]}
         />
       </div>
     </div>
