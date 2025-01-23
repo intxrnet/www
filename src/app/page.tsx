@@ -17,6 +17,10 @@ export default function Home() {
               description: "refine sentences quickly with precise checks",
             },
             {
+              text: "essay quality",
+              description: "quantitative feedback on writing",
+            },
+            {
               text: "creative notepad",
               description:
                 "write in structured sections, hush distractions with a gentle blur",
@@ -96,11 +100,74 @@ export default function Home() {
             },
           ]}
         />
+        <LeftCloud
+          title="health"
+          items={[
+            {
+              text: "nutrition score",
+              description: "find out food quality",
+            },
+          ]}
+        />
       </div>
 
       <div className="w-1/2 flex flex-col items-start p-4 space-y-4">
         <RightCloud
-          title="UX"
+          title="hardware"
+          items={[
+            {
+              text: "display gamuts",
+              description: "compare monitor color spaces",
+            },
+            {
+              text: "screen stats",
+              description: "measure screen dimensions",
+            },
+            {
+              text: "browser data",
+              description: "check browser leak",
+            },
+            {
+              text: "keyboard",
+              description: "check key rollover",
+            },
+            {
+              text: "mouse",
+              description: "test mouse accuracy and calibration",
+            },
+            {
+              text: "speaker",
+              description: "check audio quality",
+            },
+            {
+              text: "webcam",
+              description: "check video quality",
+            },
+          ]}
+        />
+        <RightCloud
+          title="network"
+          items={[
+            {
+              text: "ip",
+              description: "find your public ip",
+            },
+            {
+              text: "vpn test",
+              description: "check your vpn",
+            },
+            {
+              text: "trace-route",
+              description: "find network path",
+            },
+            {
+              text: "api test",
+              description: "test api endpoints",
+            },
+          ]}
+        />
+        <RightCloud
+          title="ux"
           items={[
             {
               text: "colors",
@@ -123,8 +190,8 @@ export default function Home() {
               description: "repeatable vector designs",
             },
             {
-              text: "svg noise",
-              description: "static grains",
+              text: "svg textures",
+              description: "static textures and grains",
             },
           ]}
         />
@@ -132,20 +199,24 @@ export default function Home() {
           title="web"
           items={[
             {
+              text: "domain name-gen",
+              description: "find the perfect domain name",
+            },
+            {
+              text: "open graph",
+              description: "test previews",
+            },
+            {
               text: "layouts",
               description: "brainstorm flex and grid layouts",
             },
             {
-              text: "palettes",
-              description: "find novel color matches",
+              text: "grainy gradients",
+              description: "find perfect grain blend",
             },
             {
               text: "cursors",
               description: "test custom pointers, add playful interactivity",
-            },
-            {
-              text: "domains",
-              description: "find the perfect domain name",
             },
           ]}
         />
