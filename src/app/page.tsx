@@ -123,12 +123,16 @@ export default function Home() {
               description: "find that hue",
             },
             {
-              text: "sensor",
+              text: "censor",
               description: "obfuscate faces and sensitive data",
             },
             {
               text: "convert to base64",
               description: "embed images directly into code",
+            },
+            {
+              text: "qr and barcodes",
+              description: "generate and scan",
             },
           ]}
         />
@@ -185,6 +189,10 @@ export default function Home() {
               description: "find your public ip",
             },
             {
+              text: "password",
+              description: "generate secure passwords",
+            },
+            {
               text: "vpn test",
               description: "check your vpn",
             },
@@ -195,6 +203,14 @@ export default function Home() {
             {
               text: "api test",
               description: "test api endpoints",
+            },
+            {
+              text: "encoding",
+              description: "convert between formats",
+            },
+            {
+              text: "encryption",
+              description: "encrypt and decrypt data",
             },
           ]}
         />
@@ -231,12 +247,16 @@ export default function Home() {
           title="web"
           items={[
             {
-              text: "domain name-gen",
+              text: "domain name generator",
               description: "find the perfect domain name",
             },
             {
-              text: "open graph",
+              text: "open graph viewer",
               description: "test previews",
+            },
+            {
+              text: "open graph generator",
+              description: "create previews",
             },
             {
               text: "layouts",
@@ -281,6 +301,18 @@ export default function Home() {
             {
               text: "cursors",
               description: "test custom pointers, add playful interactivity",
+            },
+            {
+              text: "html playground",
+              description: "quickly test html",
+            },
+            {
+              text: "javascript playground",
+              description: "quickly test javascript code",
+            },
+            {
+              text: "react component test",
+              description: "quickly play with react components",
             },
           ]}
         />
