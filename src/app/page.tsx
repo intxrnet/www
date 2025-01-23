@@ -53,6 +53,10 @@ export default function Home() {
           title="text"
           items={[
             {
+              text: "stats",
+              description: "counts, frequencies, and more",
+            },
+            {
               text: "compare",
               description: "see changes side by side",
             },
@@ -61,12 +65,24 @@ export default function Home() {
               description: "examine between different formats",
             },
             {
+              text: "boilerplate",
+              description: "more than just lorem ipsum",
+            },
+            {
+              text: "dyslexic convert",
+              description: "bionisation for dyslexic readers",
+            },
+            {
               text: "regex",
               description: "hunt patterns with precision",
             },
             {
               text: "strip",
               description: "convert language to plain text",
+            },
+            {
+              text: "switch case",
+              description: "toggle between different letter cases",
             },
           ]}
         />
@@ -97,6 +113,22 @@ export default function Home() {
             {
               text: "scrub",
               description: "wipe metadata clean",
+            },
+            {
+              text: "editor and filter",
+              description: "adjust images on the fly",
+            },
+            {
+              text: "color picker",
+              description: "find that hue",
+            },
+            {
+              text: "sensor",
+              description: "obfuscate faces and sensitive data",
+            },
+            {
+              text: "convert to base64",
+              description: "embed images directly into code",
             },
           ]}
         />
@@ -213,6 +245,38 @@ export default function Home() {
             {
               text: "grainy gradients",
               description: "find perfect grain blend",
+            },
+            {
+              text: "css templates",
+              description: "basic css templates",
+            },
+            {
+              text: "spline functions",
+              description: "test bezier curves",
+            },
+            {
+              text: "skeuomorphism",
+              description: "",
+            },
+            {
+              text: "neumorphism",
+              description: "",
+            },
+            {
+              text: "glassmorphism",
+              description: "",
+            },
+            {
+              text: "material design",
+              description: "",
+            },
+            {
+              text: "css shapes",
+              description: "",
+            },
+            {
+              text: "shadow generator",
+              description: "",
             },
             {
               text: "cursors",
