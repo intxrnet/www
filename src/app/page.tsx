@@ -84,6 +84,19 @@ export default function Home() {
               text: "switch case",
               description: "toggle between different letter cases",
             },
+
+            {
+              text: "reading difficulty",
+              description: "use popular formulas to gauge readability",
+            },
+            {
+              text: "text to speech",
+              description: "convert your text to audio locally",
+            },
+            {
+              text: "reverse text",
+              description: "mirror your text for fun or obfuscation",
+            },
           ]}
         />
         <LeftCloud
@@ -100,6 +113,18 @@ export default function Home() {
             {
               text: "compare",
               description: "highlight code differences",
+            },
+            {
+              text: "obfuscate",
+              description: "scramble your code for distribution",
+            },
+            {
+              text: "lint",
+              description: "basic code linting to maintain style consistency",
+            },
+            {
+              text: "dependency graph",
+              description: "visualize code modules as a dependency tree",
             },
           ]}
         />
@@ -134,6 +159,14 @@ export default function Home() {
               text: "qr and barcodes",
               description: "generate and scan",
             },
+            {
+              text: "ascii art generator",
+              description: "turn images into ASCII text art",
+            },
+            {
+              text: "steganography",
+              description: "hide secret messages inside images",
+            },
           ]}
         />
         <LeftCloud
@@ -142,6 +175,68 @@ export default function Home() {
             {
               text: "nutrition score",
               description: "find out food quality",
+            },
+            {
+              text: "hydration reminder",
+              description: "get gentle nudges to stay hydrated",
+            },
+            {
+              text: "breathe",
+              description: "find peace",
+            },
+          ]}
+        />
+        <LeftCloud
+          title="audio"
+          items={[
+            {
+              text: "voice recorder",
+              description: "record audio directly in your browser",
+            },
+            {
+              text: "audio visualizer",
+              description: "generate waveforms from mic input",
+            },
+            {
+              text: "pitch analyzer",
+              description: "identify musical pitch locally",
+            },
+            {
+              text: "soundboard",
+              description: "trigger and combine local sound effects",
+            },
+            {
+              text: "white noise generator",
+              description: "relaxing background sounds on demand",
+            },
+          ]}
+        />
+        <LeftCloud
+          title="pdf"
+          items={[
+            {
+              text: "merge pdf",
+              description: "combine multiple PDFs client-side",
+            },
+            {
+              text: "split pdf",
+              description: "separate pages into multiple PDFs",
+            },
+            {
+              text: "pdf compress",
+              description: "reduce size without online services",
+            },
+            {
+              text: "pdf to text",
+              description: "extract text from PDFs locally",
+            },
+            {
+              text: "sign pdf",
+              description: "draw e-signatures in your browser",
+            },
+            {
+              text: "pdf metadata editor",
+              description: "modify PDF properties offline",
             },
           ]}
         />
@@ -179,6 +274,14 @@ export default function Home() {
               text: "webcam",
               description: "check video quality",
             },
+            {
+              text: "ram test",
+              description: "simulate memory stress locally",
+            },
+            {
+              text: "browser sensor data",
+              description: "show accelerometer & gyroscope data",
+            },
           ]}
         />
         <RightCloud
@@ -211,6 +314,10 @@ export default function Home() {
             {
               text: "encryption",
               description: "encrypt and decrypt data",
+            },
+            {
+              text: "network speed",
+              description: "quick local speed test (no external servers)",
             },
           ]}
         />
@@ -314,6 +421,10 @@ export default function Home() {
               text: "react component test",
               description: "quickly play with react components",
             },
+            {
+              text: "pwa generator",
+              description: "create a basic manifest for progressive web apps",
+            },
           ]}
         />
         <RightCloud
@@ -322,6 +433,61 @@ export default function Home() {
             {
               text: "layouts",
               description: "find optimal screen arrangement",
+            },
+            {
+              text: "device orientation",
+              description: "simulate different phone rotations",
+            },
+          ]}
+        />
+
+        <RightCloud
+          title="gaming"
+          items={[
+            {
+              text: "reaction time test",
+              description: "measure your reflexes locally",
+            },
+            {
+              text: "aim trainer",
+              description: "improve your precision and speed",
+            },
+            {
+              text: "typing speed test",
+              description: "evaluate words-per-minute & accuracy",
+            },
+            {
+              text: "click speed test",
+              description: "how many clicks can you do in a second?",
+            },
+            {
+              text: "visual memory game",
+              description: "strengthen your memory with random patterns",
+            },
+          ]}
+        />
+        <RightCloud
+          title="benchmark"
+          items={[
+            {
+              text: "canvas stress test",
+              description: "push your GPU to its limits using canvas",
+            },
+            {
+              text: "cpu stress test",
+              description: "local CPU calculations to gauge performance",
+            },
+            {
+              text: "webgl benchmark",
+              description: "test your browser's 3D rendering capabilities",
+            },
+            {
+              text: "memory leak test",
+              description: "monitor app memory usage in real time",
+            },
+            {
+              text: "fps meter",
+              description: "continuously display frames per second",
             },
           ]}
         />
