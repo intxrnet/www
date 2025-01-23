@@ -84,7 +84,6 @@ export default function Home() {
               text: "switch case",
               description: "toggle between different letter cases",
             },
-
             {
               text: "reading difficulty",
               description: "use popular formulas to gauge readability",
