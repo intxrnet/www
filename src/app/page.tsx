@@ -30,6 +30,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <div className="pt-2"></div>
       <Searchbar onSearch={handleSearch} />
       <div className="flex flex-1">
         <div className="w-1/2 flex flex-col items-end p-4 space-y-4">
