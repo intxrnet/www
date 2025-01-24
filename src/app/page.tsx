@@ -8,7 +8,12 @@ import RightCloud from "./components/right-cloud";
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const filterItems = (items, query) => {
+  interface Item {
+    text: string;
+    description: string;
+  }
+
+  const filterItems = (items: Item[], query: string): Item[] => {
     if (!query) return items;
     return items.filter(
       (item) =>
@@ -22,7 +27,23 @@ export default function Home() {
     setSearchQuery(query);
   };
 
-  const renderCloud = (CloudComponent, title, items) => {
+  interface CloudItem {
+    text: string;
+    description: string;
+  }
+
+  interface CloudComponentProps {
+    title: string;
+    items: CloudItem[];
+  }
+
+  type CloudComponentType = React.ComponentType<CloudComponentProps>;
+
+  const renderCloud = (
+    CloudComponent: CloudComponentType,
+    title: string,
+    items: CloudItem[]
+  ) => {
     const filteredItems = filterItems(items, searchQuery);
     if (filteredItems.length === 0) return null;
     return <CloudComponent title={title} items={filteredItems} />;
