@@ -1,13 +1,39 @@
+"use client";
+
+import { useState } from "react";
+import Searchbar from "./components/searchbar";
 import LeftCloud from "./components/left-cloud";
 import RightCloud from "./components/right-cloud";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filterItems = (items, query) => {
+    if (!query) return items;
+    return items.filter(
+      (item) =>
+        item.text.toLowerCase().includes(query.toLowerCase()) ||
+        (item.description &&
+          item.description.toLowerCase().includes(query.toLowerCase()))
+    );
+  };
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+  };
+
+  const renderCloud = (CloudComponent, title, items) => {
+    const filteredItems = filterItems(items, searchQuery);
+    if (filteredItems.length === 0) return null;
+    return <CloudComponent title={title} items={filteredItems} />;
+  };
+
   return (
-    <div className="flex min-h-screen">
-      <div className="w-1/2 flex flex-col items-end p-4 space-y-4">
-        <LeftCloud
-          title="ideation"
-          items={[
+    <div className="flex flex-col min-h-screen">
+      <Searchbar onSearch={handleSearch} />
+      <div className="flex flex-1">
+        <div className="w-1/2 flex flex-col items-end p-4 space-y-4">
+          {renderCloud(LeftCloud, "ideation", [
             {
               text: "vocab",
               description: "expand word choices through meaningful randomness",
@@ -34,11 +60,8 @@ export default function Home() {
               text: "mind map",
               description: "divide and conquer ideas",
             },
-          ]}
-        />
-        <LeftCloud
-          title="clipboard"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "clipboard", [
             {
               text: "to txt",
               description: "save snippet as plain text",
@@ -47,11 +70,8 @@ export default function Home() {
               text: "to img",
               description: "capture clipboard into an image",
             },
-          ]}
-        />
-        <LeftCloud
-          title="text"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "text", [
             {
               text: "stats",
               description: "counts, frequencies, and more",
@@ -96,11 +116,8 @@ export default function Home() {
               text: "reverse text",
               description: "mirror your text for fun or obfuscation",
             },
-          ]}
-        />
-        <LeftCloud
-          title="code"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "code", [
             {
               text: "minify",
               description: "shrink code for efficiency",
@@ -125,11 +142,8 @@ export default function Home() {
               text: "dependency graph",
               description: "visualize code modules as a dependency tree",
             },
-          ]}
-        />
-        <LeftCloud
-          title="img"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "img", [
             {
               text: "convert",
               description: "shift between formats easily",
@@ -166,11 +180,8 @@ export default function Home() {
               text: "steganography",
               description: "hide secret messages inside images",
             },
-          ]}
-        />
-        <LeftCloud
-          title="health"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "health", [
             {
               text: "nutrition score",
               description: "find out food quality",
@@ -183,11 +194,8 @@ export default function Home() {
               text: "breathe",
               description: "find peace",
             },
-          ]}
-        />
-        <LeftCloud
-          title="audio"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "audio", [
             {
               text: "voice recorder",
               description: "record audio directly in your browser",
@@ -208,11 +216,8 @@ export default function Home() {
               text: "white noise generator",
               description: "relaxing background sounds on demand",
             },
-          ]}
-        />
-        <LeftCloud
-          title="pdf"
-          items={[
+          ])}
+          {renderCloud(LeftCloud, "pdf", [
             {
               text: "merge pdf",
               description: "combine multiple PDFs client-side",
@@ -237,14 +242,11 @@ export default function Home() {
               text: "pdf metadata editor",
               description: "modify PDF properties offline",
             },
-          ]}
-        />
-      </div>
+          ])}
+        </div>
 
-      <div className="w-1/2 flex flex-col items-start p-4 space-y-4">
-        <RightCloud
-          title="hardware"
-          items={[
+        <div className="w-1/2 flex flex-col items-start p-4 space-y-4">
+          {renderCloud(RightCloud, "hardware", [
             {
               text: "display gamuts",
               description: "compare monitor color spaces",
@@ -281,11 +283,8 @@ export default function Home() {
               text: "browser sensor data",
               description: "show accelerometer & gyroscope data",
             },
-          ]}
-        />
-        <RightCloud
-          title="network"
-          items={[
+          ])}
+          {renderCloud(RightCloud, "network", [
             {
               text: "ip",
               description: "find your public ip",
@@ -318,11 +317,8 @@ export default function Home() {
               text: "network speed",
               description: "quick local speed test (no external servers)",
             },
-          ]}
-        />
-        <RightCloud
-          title="ux"
-          items={[
+          ])}
+          {renderCloud(RightCloud, "ux", [
             {
               text: "colors",
               description: "find your color palette",
@@ -347,11 +343,8 @@ export default function Home() {
               text: "svg textures",
               description: "static textures and grains",
             },
-          ]}
-        />
-        <RightCloud
-          title="web"
-          items={[
+          ])}
+          {renderCloud(RightCloud, "web", [
             {
               text: "domain name generator",
               description: "find the perfect domain name",
@@ -424,11 +417,8 @@ export default function Home() {
               text: "pwa generator",
               description: "create a basic manifest for progressive web apps",
             },
-          ]}
-        />
-        <RightCloud
-          title="mobile"
-          items={[
+          ])}
+          {renderCloud(RightCloud, "mobile", [
             {
               text: "layouts",
               description: "find optimal screen arrangement",
@@ -437,12 +427,8 @@ export default function Home() {
               text: "device orientation",
               description: "simulate different phone rotations",
             },
-          ]}
-        />
-
-        <RightCloud
-          title="gaming"
-          items={[
+          ])}
+          {renderCloud(RightCloud, "gaming", [
             {
               text: "reaction time test",
               description: "measure your reflexes locally",
@@ -463,11 +449,8 @@ export default function Home() {
               text: "visual memory game",
               description: "strengthen your memory with random patterns",
             },
-          ]}
-        />
-        <RightCloud
-          title="benchmark"
-          items={[
+          ])}
+          {renderCloud(RightCloud, "benchmark", [
             {
               text: "canvas stress test",
               description: "push your GPU to its limits using canvas",
@@ -488,8 +471,8 @@ export default function Home() {
               text: "fps meter",
               description: "continuously display frames per second",
             },
-          ]}
-        />
+          ])}
+        </div>
       </div>
     </div>
   );
