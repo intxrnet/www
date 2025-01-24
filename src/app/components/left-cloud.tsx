@@ -18,7 +18,7 @@ export default function LeftCloud({ title, items }: LeftCloudProps) {
   };
 
   return (
-    <div className="relative border border-gray-300 p-4 rounded-lg w-1/2">
+    <div className="relative border border-gray-300 p-4 rounded-lg w-full md:w-1/2">
       <Link
         href={titleLink}
         className="absolute -top-3 right-2 bg-white px-2 text-sm hover:underline"

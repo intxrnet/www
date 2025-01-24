@@ -33,7 +33,7 @@ export default function Searchbar({ onSearch }: SearchbarProps) {
   };
 
   return (
-    <div className="relative w-1/2 mx-auto mb-8">
+    <div className="relative mx-auto mb-8 w-11/12 md:w-1/2">
       <span className="absolute -top-3 left-2 bg-white px-2 text-sm">
         search
       </span>
