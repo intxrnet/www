@@ -63,24 +63,29 @@ export const metadata: Metadata = {
 
 function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 h-16 flex items-center bg-background z-10 px-4">
-      <h1 className="text-xl flex-1 flex justify-end">
-        <Link href="https://www.intxr.net" className="hover:underline">
-          www
-        </Link>
-      </h1>
-      <h1 className="text-xl">
-        .
-        <Link href="https://www.intxr.net" className="hover:underline">
-          intxr
-        </Link>
-        .
-      </h1>
-      <h1 className="text-xl flex-1 flex justify-start">
-        <Link href="https://net.intxr.net" className="hover:underline">
-          net
-        </Link>
-      </h1>
+    <header className="fixed top-0 left-0 right-0 h-16 flex flex-col items-center bg-background z-10 px-4">
+      <div className="flex items-center w-full">
+        <h1 className="text-2xl flex-1 flex justify-end">
+          <Link href="https://www.intxr.net" className="hover:underline">
+            www
+          </Link>
+        </h1>
+        <h1 className="text-2xl">
+          .
+          <Link href="https://www.intxr.net" className="hover:underline">
+            intxr
+          </Link>
+          .
+        </h1>
+        <h1 className="text-2xl flex-1 flex justify-start">
+          <Link href="https://net.intxr.net" className="hover:underline">
+            net
+          </Link>
+        </h1>
+      </div>
+      <p className="text-gray-500 text-sm">
+        the repository of 100% free, local and private web apps
+      </p>
     </header>
   );
 }
