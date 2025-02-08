@@ -350,6 +350,10 @@ export default function Home() {
               description: "explore typeface combinations",
             },
             {
+              text: "font inspect",
+              description: "explore typeface properties",
+            },
+            {
               text: "icons",
               description: "explore icon packs combinations",
             },
