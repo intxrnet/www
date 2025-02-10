@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { debounce } from "lodash";
 
 interface SearchbarProps {
@@ -10,12 +10,20 @@ interface SearchbarProps {
 export default function Searchbar({ onSearch }: SearchbarProps) {
   const [searchQuery, setSearchQuery] = useState("");
 
-  const debouncedSearch = useCallback(
-    debounce((query: string) => {
+  // Memoize the debounce function
+  const debouncedSearch = useMemo(() => {
+    const debouncedFn = debounce((query: string) => {
       onSearch(query);
-    }, 300),
-    [onSearch]
-  );
+    }, 300);
+    return debouncedFn;
+  }, [onSearch]);
+
+  // Cleanup debounce on unmount
+  useEffect(() => {
+    return () => {
+      debouncedSearch.cancel();
+    };
+  }, [debouncedSearch]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
@@ -25,7 +33,7 @@ export default function Searchbar({ onSearch }: SearchbarProps) {
 
   const handleClear = () => {
     setSearchQuery("");
-    onSearch("");
+    onSearch(""); // Ensure clearing resets results
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -47,7 +55,7 @@ export default function Searchbar({ onSearch }: SearchbarProps) {
       )}
       <input
         type="text"
-        placeholder=""
+        placeholder="Search..."
         value={searchQuery}
         onChange={handleSearchChange}
         onFocus={handleFocus}

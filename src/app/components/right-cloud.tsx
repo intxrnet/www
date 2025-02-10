@@ -26,8 +26,8 @@ export default function RightCloud({ title, items }: RightCloudProps) {
         {title}
       </Link>
       <ul className="space-y-2 text-center">
-        {items.map((item, index) => (
-          <li key={index} className="relative">
+        {items.map((item) => (
+          <li key={item.text} className="relative">
             <Link
               href={formatHref(item.text)}
               className="hover:underline group"

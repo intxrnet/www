@@ -37,7 +37,13 @@ export default function Home() {
   ) => {
     const filteredItems = filterItems(items, searchQuery);
     if (filteredItems.length === 0) return null;
-    return <CloudComponent title={title} items={filteredItems} />;
+    return (
+      <CloudComponent
+        key={title} // Assign a unique key based on the title
+        title={title}
+        items={filteredItems}
+      />
+    );
   };
 
   return (
