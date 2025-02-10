@@ -84,7 +84,15 @@ function Header() {
         </h1>
       </div>
       <p className="text-gray-500 text-sm">
-        the repository of 100% free, local and private web apps
+        free and local web apps generated using{" "}
+        <Link
+          href="https://www.isthisan.ai/b/rlhf"
+          className="underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          reinforcement learning
+        </Link>
       </p>
     </header>
   );
