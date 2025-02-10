@@ -55,7 +55,7 @@ export default function Searchbar({ onSearch }: SearchbarProps) {
       )}
       <input
         type="text"
-        placeholder="Search..."
+        placeholder=""
         value={searchQuery}
         onChange={handleSearchChange}
         onFocus={handleFocus}
