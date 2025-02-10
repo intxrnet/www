@@ -3,9 +3,9 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   request: Request,
-  context: { params: { category: string } }
+  { params }: { params: Promise<{ category: string }> }
 ) {
-  const category = context.params.category;
+  const { category } = await params;
 
   if (!cloudData[category]) {
     return NextResponse.json({ error: "Category not found" }, { status: 404 });
