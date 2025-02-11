@@ -9,6 +9,7 @@ export async function GET(
 
   if (!cloudData[category]) {
     return NextResponse.json({
+      name: "template",
       items: [
         {
           text: "template item 1",
@@ -27,5 +28,8 @@ export async function GET(
   }
 
   // Return only the items array, excluding the 'side' property
-  return NextResponse.json({ items: cloudData[category].items });
+  return NextResponse.json({
+    name: category,
+    items: cloudData[category].items,
+  });
 }
