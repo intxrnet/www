@@ -280,10 +280,6 @@ export const cloudData: CloudData = {
         text: "ram test",
         description: "simulate memory stress locally",
       },
-      {
-        text: "browser sensor data",
-        description: "show accelerometer & gyroscope data",
-      },
     ],
   },
   network: {
