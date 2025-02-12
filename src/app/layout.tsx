@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
+import { siteMetadata } from "./metadata";
 import Link from "next/link";
 import "./globals.css";
 
@@ -11,32 +12,32 @@ const ibmPlex = IBM_Plex_Sans({
 
 export const metadata: Metadata = {
   title: "the intxrnet",
-  description: "Free, Open-Source, Client-Side Web Tools",
+  description: siteMetadata.description,
   keywords:
     "web tools, open source, client-side, development tools, browser tools",
-  authors: [{ name: "intxrnet" }],
+  authors: [{ name: siteMetadata.author }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.intxr.net",
-    siteName: "the intxrnet",
-    title: "the intxrnet",
-    description: "Free, Open-Source, Client-Side Web Tools",
+    url: siteMetadata.siteUrl,
+    siteName: siteMetadata.siteName,
+    title: siteMetadata.title,
+    description: siteMetadata.description,
     images: [
       {
-        url: "/image.png",
+        url: siteMetadata.socialBanner,
         width: 800,
         height: 800,
-        alt: "the intxrnet - Free, Open-Source, Client-Side Web Tools",
+        alt: siteMetadata.title,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "the intxrnet",
-    description: "Free, Open-Source, Client-Side Web Tools",
-    images: ["/icon.png"],
-    creator: "@intxrnet",
+    title: siteMetadata.title,
+    description: siteMetadata.description,
+    images: [siteMetadata.socialBanner],
+    creator: siteMetadata.authorUrl,
   },
   robots: {
     index: true,
@@ -56,9 +57,9 @@ export const metadata: Metadata = {
     apple: "/icon.png",
   },
   alternates: {
-    canonical: "https://www.intxr.net",
+    canonical: siteMetadata.siteUrl,
   },
-  metadataBase: new URL("https://www.intxr.net"),
+  metadataBase: new URL(siteMetadata.siteUrl),
 };
 
 function Header() {
