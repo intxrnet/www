@@ -7,6 +7,13 @@ export async function GET(
 ) {
   const { category } = await params;
 
+  if (category === "net") {
+    return NextResponse.json({
+      name: "net",
+      items: cloudData,
+    });
+  }
+
   if (!cloudData[category]) {
     return NextResponse.json({
       name: "template",
