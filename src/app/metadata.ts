@@ -1,4 +1,4 @@
-const SUB = "net";
+const SUB = "www";
 
 // Base URL construction based on environment
 const BASE_URL = `https://${SUB}.intxr.net`;
