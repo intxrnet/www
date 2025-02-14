@@ -294,8 +294,8 @@ export const cloudData: CloudData = {
         description: "generate secure passwords",
       },
       {
-        text: "trace-route",
-        description: "find network path",
+        text: "lookup-speed",
+        description: "find lookup speed at your end",
       },
       {
         text: "api test",
