@@ -294,10 +294,6 @@ export const cloudData: CloudData = {
         description: "generate secure passwords",
       },
       {
-        text: "vpn test",
-        description: "check your vpn",
-      },
-      {
         text: "trace-route",
         description: "find network path",
       },
