@@ -309,10 +309,6 @@ export const cloudData: CloudData = {
         text: "encryption",
         description: "encrypt and decrypt data",
       },
-      {
-        text: "network speed",
-        description: "quick local speed test (no external servers)",
-      },
     ],
   },
   ux: {
