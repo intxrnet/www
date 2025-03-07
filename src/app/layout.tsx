@@ -85,7 +85,7 @@ function Header() {
         </h1>
       </div>
       <p className="text-gray-500 text-sm">
-        free and local web apps generated using{" "}
+        free and local web apps. some generated using{" "}
         <Link
           href="https://www.isthisan.ai/b/rlhf"
           className="underline"

@@ -50,7 +50,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <div className="pt-2"></div>
       <Searchbar onSearch={handleSearch} />
-      <div className="max-w-2xl mx-auto text-center border border-gray-300 p-6 rounded-lg my-4 bg-white/50 backdrop-blur-sm">
+      {/* <div className="max-w-2xl mx-auto text-center border border-gray-300 p-6 rounded-lg my-4 bg-white/50 backdrop-blur-sm">
         <p className="text-gray-700">
           The hardware, network and parts of text tools are now ready for you to
           try. More islands are coming by end of February 2025.
@@ -67,7 +67,7 @@ export default function Home() {
           </a>{" "}
           — which is computationally intensive for my laptop.
         </p>
-      </div>
+      </div> */}
       <div className="flex flex-1">
         <div className="w-1/2 flex flex-col items-end p-4 space-y-4">
           {Object.entries(cloudData)
