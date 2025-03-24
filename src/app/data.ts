@@ -11,37 +11,37 @@ interface CloudData {
 }
 
 export const cloudData: CloudData = {
-  ideation: {
-    side: "left",
-    items: [
-      {
-        text: "vocab",
-        description: "expand word choices through meaningful randomness",
-      },
-      {
-        text: "grammar",
-        description: "refine sentences quickly with precise checks",
-      },
-      {
-        text: "essay quality",
-        description: "quantitative feedback on writing",
-      },
-      {
-        text: "creative notepad",
-        description:
-          "write in structured sections, hush distractions with a gentle blur",
-      },
-      {
-        text: "brainstorming canvas",
-        description:
-          "map tasks visually, link ideas, and forge clear workflow paths",
-      },
-      {
-        text: "mind map",
-        description: "divide and conquer ideas",
-      },
-    ],
-  },
+  // ideation: {
+  //   side: "left",
+  //   items: [
+  //     {
+  //       text: "vocab",
+  //       description: "expand word choices through meaningful randomness",
+  //     },
+  //     {
+  //       text: "grammar",
+  //       description: "refine sentences quickly with precise checks",
+  //     },
+  //     {
+  //       text: "essay quality",
+  //       description: "quantitative feedback on writing",
+  //     },
+  //     {
+  //       text: "creative notepad",
+  //       description:
+  //         "write in structured sections, hush distractions with a gentle blur",
+  //     },
+  //     {
+  //       text: "brainstorming canvas",
+  //       description:
+  //         "map tasks visually, link ideas, and forge clear workflow paths",
+  //     },
+  //     {
+  //       text: "mind map",
+  //       description: "divide and conquer ideas",
+  //     },
+  //   ],
+  // },
   clipboard: {
     side: "left",
     items: [
@@ -174,23 +174,23 @@ export const cloudData: CloudData = {
       },
     ],
   },
-  health: {
-    side: "left",
-    items: [
-      {
-        text: "nutrition score",
-        description: "find out food quality",
-      },
-      {
-        text: "hydration reminder",
-        description: "get gentle nudges to stay hydrated",
-      },
-      {
-        text: "breathe",
-        description: "find peace",
-      },
-    ],
-  },
+  // health: {
+  //   side: "left",
+  //   items: [
+  //     {
+  //       text: "nutrition score",
+  //       description: "find out food quality",
+  //     },
+  //     {
+  //       text: "hydration reminder",
+  //       description: "get gentle nudges to stay hydrated",
+  //     },
+  //     {
+  //       text: "breathe",
+  //       description: "find peace",
+  //     },
+  //   ],
+  // },
   audio: {
     side: "left",
     items: [
@@ -421,19 +421,19 @@ export const cloudData: CloudData = {
       },
     ],
   },
-  mobile: {
-    side: "right",
-    items: [
-      {
-        text: "layouts",
-        description: "find optimal screen arrangement",
-      },
-      {
-        text: "device orientation",
-        description: "simulate different phone rotations",
-      },
-    ],
-  },
+  // mobile: {
+  //   side: "right",
+  //   items: [
+  //     {
+  //       text: "layouts",
+  //       description: "find optimal screen arrangement",
+  //     },
+  //     {
+  //       text: "device orientation",
+  //       description: "simulate different phone rotations",
+  //     },
+  //   ],
+  // },
   gaming: {
     side: "right",
     items: [
@@ -459,29 +459,29 @@ export const cloudData: CloudData = {
       },
     ],
   },
-  benchmark: {
-    side: "right",
-    items: [
-      {
-        text: "canvas stress test",
-        description: "push your GPU to its limits using canvas",
-      },
-      {
-        text: "cpu stress test",
-        description: "local CPU calculations to gauge performance",
-      },
-      {
-        text: "webgl benchmark",
-        description: "test your browser's 3D rendering capabilities",
-      },
-      {
-        text: "memory leak test",
-        description: "monitor app memory usage in real time",
-      },
-      {
-        text: "fps meter",
-        description: "continuously display frames per second",
-      },
-    ],
-  },
+  // benchmark: {
+  //   side: "right",
+  //   items: [
+  //     {
+  //       text: "canvas stress test",
+  //       description: "push your GPU to its limits using canvas",
+  //     },
+  //     {
+  //       text: "cpu stress test",
+  //       description: "local CPU calculations to gauge performance",
+  //     },
+  //     {
+  //       text: "webgl benchmark",
+  //       description: "test your browser's 3D rendering capabilities",
+  //     },
+  //     {
+  //       text: "memory leak test",
+  //       description: "monitor app memory usage in real time",
+  //     },
+  //     {
+  //       text: "fps meter",
+  //       description: "continuously display frames per second",
+  //     },
+  //   ],
+  // },
 };
